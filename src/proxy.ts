@@ -6,7 +6,7 @@ export const proxy = async (request: NextRequest) => {
 
   if (!sessionCookie) {
     const signInUrl = new URL("/sign-in", request.url)
-    signInUrl.searchParams.set("callbackUrl", "/dashboard")
+    signInUrl.searchParams.set("callbackUrl", request.nextUrl.pathname)
     return NextResponse.redirect(signInUrl)
   }
 
@@ -14,5 +14,5 @@ export const proxy = async (request: NextRequest) => {
 }
 
 export const config = {
-  matcher: ["/dashboard"],
+  matcher: ["/dashboard", "/admin/:path*"],
 }

@@ -148,3 +148,121 @@ body {
     @apply font-sans;
 	}
 }
+
+@layer components {
+	.blog-prose {
+		@apply text-base leading-8 text-stone-700 dark:text-stone-200;
+	}
+
+	.blog-prose > * + * {
+		@apply mt-6;
+	}
+
+	.blog-prose h1,
+	.blog-prose h2,
+	.blog-prose h3,
+	.blog-prose h4 {
+		@apply font-semibold leading-tight text-stone-950 dark:text-stone-50;
+	}
+
+	.blog-prose h1 {
+		@apply text-4xl;
+	}
+
+	.blog-prose h2 {
+		@apply text-3xl;
+	}
+
+	.blog-prose h3 {
+		@apply text-2xl;
+	}
+
+	.blog-prose p,
+	.blog-prose li,
+	.blog-prose blockquote {
+		@apply text-[1.03rem] leading-8;
+	}
+
+	.blog-prose ul {
+		@apply list-disc pl-6;
+	}
+
+	.blog-prose ol {
+		@apply list-decimal pl-6;
+	}
+
+	.blog-prose a {
+		@apply font-medium text-amber-700 underline decoration-amber-500/50 underline-offset-4 dark:text-amber-300;
+	}
+
+	.blog-prose blockquote {
+		@apply rounded-r-2xl border-l-4 border-amber-500/40 bg-amber-500/8 px-5 py-4 italic;
+	}
+
+	.blog-prose pre {
+		@apply overflow-x-auto rounded-[1.5rem] bg-stone-950 px-5 py-4 text-sm text-stone-100;
+	}
+
+	.blog-prose code {
+		@apply rounded bg-stone-200/80 px-1.5 py-0.5 text-[0.92em] dark:bg-stone-800;
+	}
+
+	.blog-prose pre code {
+		@apply bg-transparent px-0 py-0 text-inherit;
+	}
+
+	.blog-prose hr {
+		@apply border-stone-300/80 dark:border-stone-700;
+	}
+
+	.blog-prose table {
+		@apply w-full overflow-hidden rounded-[1.25rem] border border-stone-300/70 text-sm dark:border-stone-700;
+	}
+
+	.blog-prose thead {
+		@apply bg-stone-100/80 dark:bg-stone-900/80;
+	}
+
+	.blog-prose th,
+	.blog-prose td {
+		@apply border border-stone-300/70 px-4 py-3 text-left dark:border-stone-700;
+	}
+
+	.blog-prose img {
+		@apply h-auto w-full rounded-[1.5rem] border border-black/8 object-cover dark:border-white/10;
+	}
+
+	.mdx-editor-toolbar {
+		@apply sticky top-0 z-10 rounded-t-[1.5rem] border-b border-black/8 bg-white/95 backdrop-blur dark:border-white/10 dark:bg-stone-950/95;
+	}
+
+	.mdx-editor-root {
+		@apply rounded-[1.5rem] border border-black/8 bg-white shadow-sm dark:border-white/10 dark:bg-stone-950;
+	}
+
+	.mdx-editor-root :where(.mdxeditor-popup-container, .mdxeditor-select-content, .mdxeditor-dialog) {
+		@apply text-sm;
+	}
+
+	.mdx-editor-root .mdxeditor-rich-text-editor {
+		@apply min-h-[28rem] px-5 py-6;
+	}
+
+	.mdx-editor-root .mdxeditor-source-editor,
+	.mdx-editor-root .cm-editor {
+		@apply min-h-[28rem];
+	}
+
+	.mdx-editor-root .mdxeditor-diff-editor {
+		@apply min-h-[28rem];
+	}
+
+	.mdx-editor-root .mdxeditor-toolbar button,
+	.mdx-editor-root .mdxeditor-toolbar select {
+		@apply rounded-md;
+	}
+
+	.mdx-editor-root .mdxeditor-toolbar {
+		@apply sticky top-0 z-10 rounded-t-[1.5rem] border-b border-black/8 bg-white/95 backdrop-blur dark:border-white/10 dark:bg-stone-950/95;
+	}
+}

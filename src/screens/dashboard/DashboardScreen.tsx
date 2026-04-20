@@ -14,6 +14,10 @@ const DashboardScreen = async () => {
     redirect("/sign-in?callbackUrl=/dashboard")
   }
 
+  if (session.user.role === "admin") {
+    redirect("/admin/dashboard")
+  }
+
   return <DashboardPanel session={session} signOutAction={signOutAction} />
 }
 
