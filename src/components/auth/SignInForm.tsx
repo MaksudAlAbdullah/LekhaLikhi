@@ -56,7 +56,7 @@ const SignInForm = ({ form, onSubmit, isPending, errorMessage }: SignInFormProps
       <button
         type="submit"
         disabled={isPending}
-        className="w-full rounded-full bg-stone-900 px-5 py-3 text-sm font-semibold text-stone-50 transition hover:bg-stone-700 disabled:cursor-not-allowed disabled:opacity-70 dark:bg-amber-300 dark:text-stone-950 dark:hover:bg-amber-200"
+        className="w-full rounded-full bg-stone-800 px-5 py-3 text-sm font-semibold text-stone-50 transition hover:bg-stone-700 disabled:cursor-not-allowed disabled:opacity-70 dark:bg-amber-300 dark:text-stone-950 dark:hover:bg-amber-200"
       >
         {isPending ? "Signing in..." : "Sign in"}
       </button>
