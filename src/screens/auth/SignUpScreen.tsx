@@ -54,11 +54,12 @@ const SignUpScreen = () => {
   return (
     <AuthShell
       title="Create your author account."
-      description="This setup uses Better Auth with MongoDB so you can immediately extend into role-based blog permissions afterward."
+      description="This setup use Better Auth with MongoDB so you can immediately extend into role-based blog permissions afterward."
       alternateHref="/sign-in"
       alternateLabel="Sign in"
       alternateText="Already have an account?"
     >
+
       <SignUpForm form={form} onSubmit={handleSubmit} isPending={isPending} errorMessage={errorMessage} />
     </AuthShell>
   )
